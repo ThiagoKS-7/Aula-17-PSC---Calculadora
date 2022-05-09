@@ -1,45 +1,11 @@
 package app;
 
+import app.calculadora.Calculadora;
+
 import javax.swing.*;
-import java.util.Scanner;
 
 public class Main {
-    public static void soma () {
-        double x, y;
-        x = Double.parseDouble(JOptionPane.showInputDialog(
-                "Digite o primeiro valor: "));
-        y = Double.parseDouble(JOptionPane.showInputDialog(
-                "Digite o segundo valor: "));
-        double soma = x + y;
-        JOptionPane.showMessageDialog(null,"A soma vale: " + soma);
-    }
-    public static void subtrai () {
-        double x, y;
-        x = Double.parseDouble(JOptionPane.showInputDialog(
-                "Digite o primeiro valor: "));
-        y = Double.parseDouble(JOptionPane.showInputDialog(
-                "Digite o segundo valor: "));
-        double subtracao = x - y;
-        JOptionPane.showMessageDialog(null,"A subtração vale: " + subtracao);
-    }
-    public static void multiplica () {
-        double x, y;
-        x = Double.parseDouble(JOptionPane.showInputDialog(
-                "Digite o primeiro valor: "));
-        y = Double.parseDouble(JOptionPane.showInputDialog(
-                "Digite o segundo valor: "));
-        double multiplicacao = x * y;
-        JOptionPane.showMessageDialog(null,"A multiplicação vale: " + multiplicacao);
-    }
-    public static void divide () {
-        double x, y;
-        x = Double.parseDouble(JOptionPane.showInputDialog(
-                "Digite o primeiro valor: "));
-        y = Double.parseDouble(JOptionPane.showInputDialog(
-                "Digite o segundo valor: "));
-        double divisao = x / y;
-        JOptionPane.showMessageDialog(null,"A divisão vale: " + divisao);
-    }
+
     public static void main(String[] args) {
         int opcao = -1;
         int x = 0, y = 0;
@@ -53,6 +19,7 @@ public class Main {
                             "2- Subtração\n" +
                             "3- Divisão\n" +
                             "4- Multiplicação\n" +
+                            "5- Potenciação\n" +
                             "0- Sair\n"));
             switch (opcao) {
                 case 0:
@@ -69,6 +36,11 @@ public class Main {
                     break;
                 case 4:
                     calculadora.multiplica();
+                    break;
+                case 5:
+                    int expoente = Integer.parseInt(JOptionPane.showInputDialog(
+                            "Digite o valor do expoente: "));
+                    calculadora.elevaNa(expoente);
                     break;
                     default: JOptionPane.showMessageDialog(null, "Opção Inválida! \n");
 
