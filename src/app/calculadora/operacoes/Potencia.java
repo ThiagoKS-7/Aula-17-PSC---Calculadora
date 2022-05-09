@@ -14,8 +14,11 @@ public class Potencia extends Operacao{
     // POLIMORFISMO DA CLASSE OPERAÇÃO
     @Override
     public double potencia() {
-        double potencia = 1;
-        for (int i = 1; i <= expoente; i ++) potencia = potencia * this.expoente;
+        double potencia = this.valores[0];
+        for (int i = 1; i < expoente; i ++)  {
+            System.out.println(potencia);
+            potencia = potencia * potencia;
+        }
         return potencia;
     }
 
