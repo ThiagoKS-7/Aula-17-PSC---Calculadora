@@ -8,9 +8,9 @@ public class Soma extends Operacao{
         this.valores[0] = x;
         this.valores[1] = y;
     }
-    // POLIMORFISMO DA CLASSE OPERAÇÃO
+    // POLIMORFISMO COM CLASSE OPERAÇÃO
     @Override
-    public double soma() {
+    public double calcular() {
         return this.valores[0] + this.valores[1];
     }
 

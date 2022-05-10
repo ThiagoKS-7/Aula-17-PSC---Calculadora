@@ -9,9 +9,9 @@ public class Multiplica extends Operacao{
         this.valores[1] = y;
     }
 
-    // POLIMORFISMO DA CLASSE OPERAÇÃO
+    // POLIMORFISMO COM CLASSE OPERAÇÃO
     @Override
-    public double multiplica() {
+    public double calcular() {
         return this.valores[0] * this.valores[1];
     }
 

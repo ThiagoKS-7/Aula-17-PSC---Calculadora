@@ -9,9 +9,9 @@ public class Divide extends Operacao{
         this.valores[1] = y;
     }
 
-    // POLIMORFISMO DA CLASSE OPERAÇÃO
+    // POLIMORFISMO COM CLASSE OPERAÇÃO
     @Override
-    public double divide() {
+    public double calcular() {
         if (this.valores[1] > 0 ) return this.valores[0] / this.valores[1];
         return 0;
     }
