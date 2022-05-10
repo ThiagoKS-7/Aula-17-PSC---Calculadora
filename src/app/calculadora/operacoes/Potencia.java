@@ -1,25 +1,34 @@
 package app.calculadora.operacoes;
 
+/*
+* NOME DOS OPERADORES DE UMA POTÊNCIA
+*   a = expoente
+* X  = base         =>   Y = potência
+*
+* Ex:
+* a = 2
+* 9ª  = 81;
+* */
+
 //EXTENDS = HERANÇA
 public class Potencia extends Operacao{
-    int expoente;
+    private final int expoente;
     //CONSTRUTOR USANDO VALORES DA SUPER :0
     public Potencia(double x,int expoente ) {
         super(x, x, 2);
         this.valores[0] = x;
-        this.valores[1] = x;
         this.expoente = expoente;
     }
 
-    // POLIMORFISMO DA CLASSE OPERAÇÃO
+    // POLIMORFISMO COM CLASSE OPERAÇÃO
     @Override
-    public double potencia() {
-        double potencia = this.valores[0];
+    public double calcular() {
+        double base = this.valores[0];
+        double resultado = 0;
         for (int i = 1; i < expoente; i ++)  {
-            System.out.println(potencia);
-            potencia = potencia * potencia;
+            resultado = base * base;
         }
-        return potencia;
+        return resultado;
     }
 
 }
