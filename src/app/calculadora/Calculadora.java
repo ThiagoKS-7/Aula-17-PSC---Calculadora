@@ -51,6 +51,22 @@ public class Calculadora {
         Potencia calcular = new Potencia(this.x,expoente);
         JOptionPane.showMessageDialog(null,String.format("A potência vale: %.2f",calcular.calcular()));
     }
+    private void raiz() {
+        this.x = Double.parseDouble(JOptionPane.showInputDialog(
+                "Digite o valor do radicando: "));
+        RaizQuadrada calcular = new RaizQuadrada(this.x);
+        JOptionPane.showMessageDialog(null,String.format("A raiz quadrada de %.2f vale: %.2f",this.x,calcular.calcular()));
+    }
+    private void bhaskara() {
+        double a = Double.parseDouble(JOptionPane.showInputDialog(
+                "Digite o valor de A: "));
+        double b = Double.parseDouble(JOptionPane.showInputDialog(
+                "Digite o valor de B: "));
+        double c = Double.parseDouble(JOptionPane.showInputDialog(
+                "Digite o valor de C: "));
+        Bhaskara calculo = new Bhaskara(a,b,c);
+        calculo.calculaRaizes();
+    }
     public void escolheOperacao(int opcao) {
         switch (opcao) {
             case 0:
@@ -72,6 +88,12 @@ public class Calculadora {
                 int expoente = Integer.parseInt(JOptionPane.showInputDialog(
                         "Digite o valor do expoente: "));
                 this.elevaNa(expoente);
+                break;
+            case 6:
+                this.raiz();
+                break;
+            case 7:
+                this.bhaskara();
                 break;
             default: JOptionPane.showMessageDialog(null, "Opção Inválida! \n");
 

@@ -23,6 +23,7 @@ public class Menu {
                             "4- Multiplicação (*)\n" +
                             "5- Potenciação (x^ª)\n" +
                             "6- Raíz quadrada (√)\n" +
+                            "7- Bhaskara (B)\n" +
                             "0- Sair\n"));
             this.calculadora.escolheOperacao(this.opcao);
         }
